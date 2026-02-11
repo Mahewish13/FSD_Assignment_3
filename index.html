@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Validation Demo</title>
+<link rel="stylesheet" href="style.css">
+<script src="main.js" ></script>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- ================= EMAIL VALIDATION ================= -->
+
+<h2>Email Validation</h2>
+
+<input type="text" id="email" placeholder="Enter email">
+<button onclick="validateEmail()">Validate Email</button>
+<div id="emailMsg" class="msg"></div>
+
+<!-- ================= PASSWORD STRENGTH ================= -->
+
+<h2>Password Strength Checker</h2>
+
+<input type="password" id="password" placeholder="Enter password" oninput="checkStrength()">
+
+<div class="strength-bar">
+  <div id="strengthFill" class="strength-fill"></div>
+</div>
+
+<div id="strengthText" class="msg"></div>
+
+<!-- ================= COOKIES ================= -->
+
+<h2>Cookies Demo</h2>
+
+<input type="text" id="cookieInput" placeholder="Value to store in cookie">
+<button onclick="setMyCookie()">Set Cookie</button>
+<button onclick="readMyCookie()">Read Cookie</button>
+
+<div id="cookieOutput" class="output"></div>
+
+<!-- ================= SESSION STORAGE ================= -->
+
+<h2>Session Storage Demo</h2>
+
+<input type="text" id="sessionInput" placeholder="Value to store in session">
+<button onclick="setSession()">Set Session</button>
+<button onclick="readSession()">Read Session</button>
+
+<div id="sessionOutput" class="output"></div>
+
+</div>
+
+</body>
+</html>
