@@ -1,6 +1,6 @@
 window.onload = () => {
   setCookie("demoCookie", "student");
-  setSessionValue("demoSession", "javascript validation");
+  setSessionValue("demoSession", "Javascript validation");
 };
 
 // ---------- EMAIL VALIDATION ----------
@@ -88,3 +88,4 @@ function resetAll(){
 
   alert("All Data Reset");
 }
+
