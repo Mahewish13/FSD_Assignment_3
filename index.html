@@ -5,25 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>JavaScript Validation Demo</title>
 <link rel="stylesheet" href="style.css">
-<script src="main.js" ></script>
+<script src="main.js" defer></script>
 </head>
 
 <body>
 
 <div class="container">
 
-<!-- ================= EMAIL VALIDATION ================= -->
+<h1>JavaScript Validation & Storage Demo</h1>
 
+<section>
 <h2>Email Validation</h2>
-
 <input type="text" id="email" placeholder="Enter email">
 <button onclick="validateEmail()">Validate Email</button>
 <div id="emailMsg" class="msg"></div>
+</section>
 
-<!-- ================= PASSWORD STRENGTH ================= -->
-
+<section>
 <h2>Password Strength Checker</h2>
-
 <input type="password" id="password" placeholder="Enter password" oninput="checkStrength()">
 
 <div class="strength-bar">
@@ -31,26 +30,36 @@
 </div>
 
 <div id="strengthText" class="msg"></div>
+</section>
 
-<!-- ================= COOKIES ================= -->
 
-<h2>Cookies Demo</h2>
+<section>
+<h2>Cookies Demo (Default: student)</h2>
 
-<input type="text" id="cookieInput" placeholder="Value to store in cookie">
+<div class="btn-group">
 <button onclick="setMyCookie()">Set Cookie</button>
 <button onclick="readMyCookie()">Read Cookie</button>
+<button onclick="clearCookie()">Clear Cookie</button>
+</div>
 
 <div id="cookieOutput" class="output"></div>
+</section>
 
-<!-- ================= SESSION STORAGE ================= -->
-
+<section>
 <h2>Session Storage Demo</h2>
 
-<input type="text" id="sessionInput" placeholder="Value to store in session">
+<div class="btn-group">
 <button onclick="setSession()">Set Session</button>
 <button onclick="readSession()">Read Session</button>
+<button onclick="clearSession()">Clear Session</button>
+</div>
 
 <div id="sessionOutput" class="output"></div>
+</section>
+
+<section>
+<button class="reset-btn" onclick="resetAll()">Reset All</button>
+</section>
 
 </div>
 
