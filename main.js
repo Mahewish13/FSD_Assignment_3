@@ -45,13 +45,8 @@ function getCookies(){
   return document.cookie;
 }
 
-function clearCookie(name){
+function deleteCookie(name){
   document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
-}
-
-function showCookies(){
-  document.getElementById("cookieOutput").textContent =
-    "Cookies: " + getCookies();
 }
 
 // ---------- SESSION HELPERS ----------
@@ -67,14 +62,40 @@ function clearSessionValue(key){
   sessionStorage.removeItem(key);
 }
 
-function showSession(){
+// ---------- BUTTON FUNCTIONS ----------
+function setMyCookie(){
+  setCookie("demoCookie", "student");
+  alert("Cookie set");
+}
+
+function readMyCookie(){
+  document.getElementById("cookieOutput").textContent =
+    "Cookies: " + getCookies();
+}
+
+function clearCookie(){
+  deleteCookie("demoCookie");
+  document.getElementById("cookieOutput").textContent = "Cookie Cleared";
+}
+
+function setSession(){
+  setSessionValue("demoSession", "Javascript validation");
+  alert("Session set");
+}
+
+function readSession(){
   document.getElementById("sessionOutput").textContent =
     "Session Value: " + getSessionValue("demoSession");
 }
 
+function clearSession(){
+  clearSessionValue("demoSession");
+  document.getElementById("sessionOutput").textContent = "Session Cleared";
+}
+
 // ---------- RESET ----------
 function resetAll(){
-  clearCookie("demoCookie");
+  deleteCookie("demoCookie");
   sessionStorage.clear();
 
   ["cookieOutput","sessionOutput","emailMsg"].forEach(id =>
@@ -88,4 +109,3 @@ function resetAll(){
 
   alert("All Data Reset");
 }
-
